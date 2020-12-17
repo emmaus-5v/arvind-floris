@@ -42,7 +42,7 @@ const getProducts = (request, response) => {
 
 const getCategories = (_request, response) => {
   // TODO: change query to make it return categories
-  pool.query('SELECT * FROM products ORDER BY id ASC', (error, results) => {
+  pool.query('SELECT * FROM categories ORDER BY id ASC', (error, results) => {
     if (error) {
       console.log(error)
       response.status(500).json("oops")

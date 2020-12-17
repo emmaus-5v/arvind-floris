@@ -6,15 +6,15 @@
 
 -- eigen stukje 
 -- 1
-insert into categories (name, description) values ('categorie 1', 'BMW');
+insert into categories (name, description) values ('BMW', 'Bayerische Motoren Werke, kortweg BMW, (Nederlands: Beierse Motorfabrieken) is een Duitse onderneming die autos en motorfietsen produceert. Het hoofdkantoor zit gevestigd in Munchen, Duitsland.');
 -- 2
-insert into categories (name, description) values ('categorie 2', 'Porsche');
+insert into categories (name, description) values ('Porsche', 'Dr. Ing. h.c. F. Porsche AG (veelal afgekort tot Porsche AG) is een Duits fabrikant van sportautos, opgericht in 1931 door Ferdinand Porsche, tevens de ontwerper van de eerste Volkswagen. Het bedrijf is gevestigd in Zuffenhausen, onder de rook van Stuttgart');
 -- 3
-insert into categories (name, description) values ('categorie 3', 'Mercedes');
+insert into categories (name, description) values ('Mercedes-Benz', 'Mercedes-Benz, veelal afgekort tot Mercedes, is een automerk uit Duitsland, ontstaan in 1926 als gevolg van de fusie tussen de Daimler Motoren Gesellschaft van Gottlieb Daimler en de firma Benz & Cie. van Carl Benz.');
 -- 4
-insert into categories (name, description) values ('categorie 4', 'Ferrari');
+insert into categories (name, description) values ('Ferrari', 'Ferrari is een italiaans automerk. Het merk zit in Maranello, Italie. Het bedrijf werd in 1929 opgericht als raceteam (scuderia Ferrari) door Enzo Ferrari. Pas in 1947 zou het bedrijf overgaan op de productie van legale straatautos, onder de naam van Ferrari S.p.A. Het raceteam Ferrari werd in Formule 1 zeer succesvol.');
 -- 5
-insert into categories (name, description) values ('categorie 5', 'Lamborghini');
+insert into categories (name, description) values ('Lamborghini', 'Lamborghini is van een Italiaanse fabrikant van luxe sportwagens die eigendom is van Audi. Lamborghini zijn productiefaciliteit en het hoofdkantoor zijn gevestigd in Sant Agata Bolognese, italie. De meeste modelen dragen de naam van een stier.');
 
 -- BMW 1
 insert into products (name, description, code, price) values ('BMW 1 serie', 'Deze BMW 1 serie coupe is een leuk instapmodel en is erg sportief. Er zitten 6 cilinders in de motor, hij heeft 341 PK. Deze auto heeft pas 12000km op de teller staan, dus hij is zo goed als nieuw!', '816905633-0', 55000);

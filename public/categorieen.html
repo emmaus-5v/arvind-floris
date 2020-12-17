@@ -40,10 +40,8 @@
 	</nav>
 	<main id="index">
 		<div class="container">
-			<h5>Artikelen</h5>
-			<p>Hier zie je een lijst met artikelen die je bij mij kunt bestellen.</p>
-			<p>klik op een artikel voor meer informatie<p>
-					<p>klik op de "winkelwagentje" om het artikel in je winkelwagen te stoppen</p>
+			<h5>Categorieën</h5>
+			<p>Hier zie je alle categorieën</p>
 		</div>
 	</main>
 	<footer>
@@ -55,18 +53,13 @@
 	<template id="productcard">
 
 		<div class="col-sm">
-			<div class="card" onclick="openArticlePage(this)">
+			<div class="card">
 				<h5 class="card-header product_title"></h5>
 				<img width="200" class="product_image card-img-top">
 				<div class="card-body">
 					<p class="product_description card-text"></p>
 					<ul class="product-properties">
-						<li><span class="propert-name">Prijs:</span><span class="product_price">€</span></li>
-						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
 					</ul>
-					<input class="product_amount" type="number" value="1" min="1">
-					<input class="product_id" type="hidden" name="id" data-json="">
-					<button class="btn btn-outline-dark shop-button" onclick="event.stopPropagation();addAmountClosestToBasket(this);$('.toast').toast('show')">🛒</button>
 				</div>
 			</div>
 		</div>
@@ -77,7 +70,6 @@
         const template = document.querySelector('#productcard');
         const app = document.getElementById('index')
         
-        updateBasket()
 
         const container = document.createElement('div')
         container.setAttribute('class', 'container row article-container')
@@ -85,7 +77,7 @@
         app.appendChild(container)
 
         var request = new XMLHttpRequest()
-        request.open('GET', '/api/products', true)
+        request.open('GET', '/api/categories', true)
         request.onload = function () {
             var data = JSON.parse(this.response)
             if (request.status >= 200 && request.status < 400) {
@@ -97,12 +89,8 @@
                   name = name + '...'
                 }
                 clone.querySelector(".product_title").textContent = name
-                clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
-                clone.querySelector(".product_price").textContent += product.price
-                clone.querySelector(".product_code").textContent = product.code
-                clone.querySelector(".product_id").value = product.id
-                clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
-                clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
+                clone.querySelector(".product_description").textContent = product.description
+                clone.querySelector(".product_image").src =`/categorieen_images/${product.id}.jpg`
 
                 container.appendChild(clone)
 
